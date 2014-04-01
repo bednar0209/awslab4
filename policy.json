@@ -1,5 +1,5 @@
 {	"expiration" : {"day":1},
-	"conditions": [ ["starts-with", "$key", ""],
+	"conditions": [ ["starts-with", "$key", "adam.kammchen"],
     				 {"bucket": "lab4-weeia"}, 
     				 {"acl": "private"},
     				 {"success_action_redirect": ""},   
