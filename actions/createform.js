@@ -6,6 +6,8 @@ var AWS_CONFIG_FILE = "config.json";
 var POLICY_FILE = "policy.json";
 var INDEX_TEMPLATE = "index.ejs";
 var ACCESS_KEY_FIELD_NAME = "AWSAccessKeyId";
+var POLICY_FIELD_NAME = "policy";
+var SIGNATURE_FIELD_NAME = "signature";
 
 var task = function(request, callback){
 	//1. load configuration
@@ -25,7 +27,7 @@ var task = function(request, callback){
 
 	fields.push(s3Forms.addHiddenField(ACCESS_KEY_FIELD_NAME, policy.generateEncodedPolicyDocument());
 	
-	fields.push(s3Forms.addHiddenField(ACCESS_KEY_FIELD_NAME, policy.generateSignature(awsConfig.AccessKeyId)));
+	fields.push(s3Forms.addHiddenField(ACCESS_KEY_FIELD_NAME, policy.generateSignature(awsConfig.secretAccessKey)));
 	//4. get bucket name
 	var bucket = policy.getConditionalValueByKey("bucket");
 
