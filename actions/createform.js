@@ -21,7 +21,7 @@ var task = function(request, callback){
 	//3. generate form fields for S3 POST
 	var s3Form = new s3From(policy);
 	
-	var fields = s3Form.generateS3FormFields();
+	var fields = s3Forms.generateS3FormFields();
 	
 	fields.push(s3Forms.addHiddenField(ACCESS_KEY_FIELD_NAME, awsConfig.AccessKeyId));
 
