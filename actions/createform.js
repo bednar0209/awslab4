@@ -9,6 +9,7 @@ var INDEX_TEMPLATE = "index.ejs";
 
 var task = function(request, callback){
 	//1. load configuration
+	var awsConfig = helper.readJSONFile(AWS_CONFIG_FILE);
 	
 
 	//2. prepare policy
