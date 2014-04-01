@@ -25,9 +25,9 @@ var task = function(request, callback){
 	
 	fields.push(s3Forms.addHiddenField(ACCESS_KEY_FIELD_NAME, awsConfig.AccessKeyId));
 
-	fields.push(s3Forms.addHiddenField(ACCESS_KEY_FIELD_NAME, policy.generateEncodedPolicyDocument());
+	fields.push(s3Forms.addHiddenField(POLICY_FIELD_NAME, policy.generateEncodedPolicyDocument());
 	
-	fields.push(s3Forms.addHiddenField(ACCESS_KEY_FIELD_NAME, policy.generateSignature(awsConfig.secretAccessKey)));
+	fields.push(s3Forms.addHiddenField(SIGNATURE_FIELD_NAME, policy.generateSignature(awsConfig.secretAccessKey)));
 	//4. get bucket name
 	var bucket = policy.getConditionalValueByKey("bucket");
 
