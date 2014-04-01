@@ -14,7 +14,7 @@ var task = function(request, callback){
 	
 
 	//2. prepare policy
-	
+	var policy = new Policy(policyData);
 
 	//3. generate form fields for S3 POST
 	
