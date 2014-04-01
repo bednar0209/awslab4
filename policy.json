@@ -1,6 +1,6 @@
 {	"expiration" : {"day":1},
 	"conditions": [ ["starts-with", "$key", ""],
-    				 {"bucket": ""}, 
+    				 {"bucket": "lab4-weeia"}, 
     				 {"acl": "private"},
     				 {"success_action_redirect": ""},   
     				 ["content-length-range", 0, 1048576]
