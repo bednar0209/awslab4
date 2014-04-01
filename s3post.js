@@ -29,7 +29,7 @@ Policy.prototype.getConditionValueByKey = function(key){
 	return condition;
 }
 
-var S3Form = function(awsCofig){	
+var S3Form = function(policy){	
 	if(policy instanceof Policy)
 		this.policy = policy;
 	else{
