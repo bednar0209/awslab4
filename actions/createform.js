@@ -17,9 +17,11 @@ var task = function(request, callback){
 	var policy = new Policy(policyData);
 
 	//3. generate form fields for S3 POST
+	var s3Form = new s3From(policy);
+	var fields = s3Form.generateS3FormFields();
 	
 	//4. get bucket name
-	
+	var bucket = policy.getConditionalValueByKey("bucket");
 
 	callback(null, {template: INDEX_TEMPLATE, params:{fields:[], bucket:""}});
 }
