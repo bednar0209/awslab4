@@ -1,5 +1,5 @@
 {	"expiration" : {"day":1},
-	"conditions": [ ["starts-with", "$key", "adam.kammchen"],
+	"conditions": [ ["starts-with", "$key", "artur.bednarczyk"],
     				 {"bucket": "lab4-weeia"}, 
     				 {"acl": "private"},
     				 {"success_action_redirect": "http:\\localhost:8080"},   
